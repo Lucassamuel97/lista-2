@@ -1,0 +1,26 @@
+<!-- 
+6. Crie uma String com o seu nome e sobrenome.
+ Divida o conteúdo da string com split em um vetor e imprima os
+valores.
+ Imprima o tamanho de ambos os elementos/strings do array.
+Exemplo da Divisão
+ String: Roni Banaszewski
+ Array: [Roni, Banaszewski] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nome = 'Lucas Samuel';
+		var partes = nome.split(" ");
+
+		for (k = 0 ; k < partes.length; k = k + 1 ){
+			document.write(partes[k]+" Tamanho :"+partes[k].length+"<BR>");
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--
+ 17.Escreva uma função para ler e calcular a soma dos dígitos de um número.
+Dica:
+ Usar charAt(c) e parseInt(n)
+Exemplo:
+Entrada: 43
+Saída: 7 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function numero(nr){
+			nr = nr.toString();
+			var soma = 0;
+			for (var i = 0; i < nr.length; i++) {
+				soma = soma + parseInt(nr.charAt(i));
+			}
+			return soma;
+		}
+		console.log(numero('43'));
+		console.log(numero(43));
+	</script>
+</body>
+</html>

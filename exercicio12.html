@@ -1,0 +1,40 @@
+<!-- 
+
+12.Escreva uma função que receba uma string como parâmetro e calcule a
+quantidade de vogais dentro da string.
+Exigência:
+ Apresentar o resultado simultaneamente um alert, no HTML e
+também no console do browser.
+Dica:
+ Função charAt() para pegar cada caractere da string.
+ Usar console.log(text) para imprimir no console do browser.
+Exemplo:
+Entrada: Universidade
+Saída: 6
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function cauculaVogais(string){
+			var vogais = 0;
+			string = string.toLowerCase();
+			for (var i = 0; i < string.length; i++) {
+				if(string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i"|| string.charAt(i) == "o" || string.charAt(i) == "u" ){
+					++vogais;
+				}
+			}
+			return vogais;
+		}
+
+		var vogais = cauculaVogais("Universidade");
+		alert(vogais);
+		console.log(vogais);
+	</script>
+</body>
+</html>

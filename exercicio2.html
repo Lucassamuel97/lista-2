@@ -1,0 +1,48 @@
+<!-- 
+Suponha que você foi contratado para fazer um sistema para apresentar
+um pequeno relatório para as eleições da República das Bananas. 
+Neste
+sistema, você precisa 
+1 = ler via prompt o nome e a quantidade de votos de
+cada candidato. 
+2 = Estes dados precisam ser armazenados em vetores.
+Após a leitura de todos os dados, apresentar o seguinte: 
+(a) o total de votos; 
+(b) a quantidade e percentagem de votos de cada candidato e 
+(c) o candidato vencedor.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var candidatos = [];
+
+		do{
+			var nome = prompt("Digite o Nome do candidato :");
+			var votos = prompt("Digiete os votoes");
+			candidatos.push([nome,votos]);
+		} while(prompt("[1] para sair") != '1');
+		
+		var ganhador = 0;
+		var nomeVencedor;
+		var totaldevotos = 0;
+		for (var i = 0; i < candidatos.length; i++) {
+			totaldevotos += candidatos[i][1];
+			if (parseInt(candidatos[i][1]) > ganhador){
+				ganhador = candidatos[i][1];
+				nomeVencedor = candidatos[i][0];
+			}
+		}
+		document.write("VENCEDOR : " + nomeVencedor +"<br>");
+		for (var i = 0; i < candidatos.length; i++) {
+			var porcentagem = candidatos[i][1] * 100 / totaldevotos;
+			document.write("Nome :"+candidatos[i][0]+" Total de votos : "+candidatos[i][1]+" Porcetagem geral : "+porcentagem+"<br>");
+		}
+
+		console.log(candidatos);
+	</script>
+</body>
+</html>

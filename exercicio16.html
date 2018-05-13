@@ -1,0 +1,167 @@
+<!-- 
+
+16.O alfabeto latim contém 26 caracteres e os telefones tem somente 10
+dígitos no teclado. O seu desafio é fazer um programa para tornar mais
+fácil escrever mensagens via celular, indicando a sequência de teclas
+correspondente para um conjunto de caracteres. As letras são mapeadas
+para dígitos conforme o exemplo a seguir: para inserir o caractere B, o
+programa precisa pressionar 22. Para inserir dois caracteres em
+sequência por meio da mesma tecla, o usuário precisa pausar antes de
+pressionar a tecla novamente. O caractere espaço ‘ ‘ deve ser impresso
+para indicar a pausa. Como exemplo, 2 2 indica AA, quando 22 indica B.
+Cada mensagem é formada apenas por letras maiúsculas e para emitir o
+caractere de espaço ‘ ’, é preciso pressionar a tecla 0 (zero).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	
+</style>
+</head>
+<body>
+	<div id="celular">
+		<div class="tela">
+			<header>
+				<input type="tetx" name="tela" id="tela" disabled="disabled">
+				<input type="tetx" name="verifica" id="verifica" disabled="disabled">
+			</header>
+			<main>
+				<section value="6" onclick="insereLetra(1)">1 <b>space</b></section>
+				<section value="6" onclick="insereLetra(2)">2 <b>ABC</b></section>
+				<section value="6" onclick="insereLetra(3)">3 <b>DEF</b></section>
+				<section value="6" onclick="insereLetra(4)">4 <b>GHI</b></section>
+				<section value="6" onclick="insereLetra(5)">5 <b>JKL</b></section>
+				<section value="6" onclick="insereLetra(6)">6 <b>MNO</b></section>
+				<section value="6" onclick="insereLetra(7)">7 <b>PQRS</b></section>
+				<section value="6" onclick="insereLetra(8)">8 <b>TUV</b></section>
+				<section value="6" onclick="insereLetra(9)">9 <b>WXYZ</b></section>
+				<section>*</section>
+				<section value="6" onclick="pause(' ')">0 </b>+</b></section>
+				<section onclick="verificaLetra()">#</section>
+				<button onclick="limpar()">Limpar</button>
+			</main>
+		</div>
+	</div>
+	<div id="exlicar">
+		<ul>
+			<li>Algumas Adaptações Para melhor experiencia</li>
+			<li>Pressione [0] para inserir o texto</li>
+			<li>[1] para dar o espaço</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function insereLetra(nr){
+			var verifica = document.getElementById('verifica');
+			verifica.value = verifica.value.trim()+nr;
+		}
+
+		function limpar(){
+			window.location.reload();
+		}
+
+		function pause(nr){
+			var verifica = document.getElementById('verifica');
+			var textarea = document.getElementById('tela');
+			var texto;
+
+			switch (verifica.value.trim()) {
+				case '1':
+				texto = " ";
+				break;
+				case '2':
+				texto = "A";
+				break;
+				case '22':
+				texto = "B";
+				break;
+				case '222':
+				texto = "C";
+				break;
+				case '3':
+				texto = "D";
+				break;
+				case '33':
+				texto = "E";
+				break;
+				case '333':
+				texto = "F";
+				break;
+				case '4':
+				texto = "G";
+				break;
+				case '44':
+				texto = "H";
+				break;
+				case '444':
+				texto = "H";
+				break;
+				case '44':
+				texto = "I";
+				break;
+				case '5':
+				texto = "J";
+				break;
+				case '55':
+				texto = "K";
+				break;
+				case '555':
+				texto = "L";
+				break;
+				case '6':
+				texto = "M";
+				break;
+				case '66':
+				texto = "N";
+				break;
+				case '666':
+				texto = "O";
+				break;
+				case '7':
+				texto = "P";
+				break;
+				case '77':
+				texto = "Q";
+				break;
+				case '777':
+				texto = "R";
+				break;
+				case '7777':
+				texto = "S";
+				break;
+				case '8':
+				texto = "T";
+				break;
+				case '88':
+				texto = "U";
+				break;
+				case '888':
+				texto = "V";
+				break;
+				case '9':
+				texto = "W";
+				break;
+				case '99':
+				texto = "X";
+				break;
+				case '999':
+				texto = "Y";
+				break;
+				case '9999':
+				texto = "Z";
+				break;
+				default:
+				texto = " ";
+				break;
+			}
+
+			if (true) {}
+			textarea.value = textarea.value+texto;
+			verifica.value = '';
+		}
+	</script>
+</body>
+</html>

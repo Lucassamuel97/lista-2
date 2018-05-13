@@ -1,0 +1,34 @@
+<!-- 
+15.Utilizando o exercício anterior, após o usuário digitar e a aplicação inverter
+o texto, perguntar se ele deseja inverter novamente outro texto. Se ele
+escolher “OK”, a aplicação pergunta novamente a palavra e inverte. Se
+ele clicar em “Cancelar”, a aplicação se encerra.
+Dica:
+ Utilizar confirm() para a pergunta e while para controlar o laço.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function inverso(texto){
+			var inverso = "";
+			for (var i = 0; i < texto.length; i++) {
+				inverso += texto.charAt(texto.length - i - 1);
+			}
+			return inverso;
+		}
+	</script>
+</head>
+<body>
+	<p id="resultado"></p>
+	<script type="text/javascript">
+		do{
+			document.write("O inverso : "+inverso(prompt("Digite um texto"))+"<br>" );
+		}while(window.confirm("Deseja inverter novamente outro texto") == true);
+	</script>
+	
+</body>
+</html>

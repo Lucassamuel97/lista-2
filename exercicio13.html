@@ -1,0 +1,36 @@
+<!-- 
+13.Escreva uma função que aceita 2 argumentos, uma string e uma letra, a
+função deve contabilizar o número de ocorrências da letra dentro da string.
+Exigência:
+ Esta função precisa ser anônima.
+Dica:
+ Atribuir a função a uma variável para poder invoca-la.
+Exemplo:
+Entrada: ‘Universidade’ ‘e’
+Saída: 2 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var funcao = function ocorrencias(string, letra){
+			var ocorrencias = 0;
+			for (var i = 0; i < string.length; i++) {
+				if(string.charAt(i) == letra){
+					++ocorrencias;
+				}
+			}
+			return ocorrencias;
+		}
+
+		var result = funcao('Universidade', 'e');
+
+		alert(result);
+
+	</script>
+</body>
+</html>

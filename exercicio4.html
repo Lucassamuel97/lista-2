@@ -1,0 +1,48 @@
+<!--
+ 4. Suponha que a empresa de ônibus Unidos no Rodado contratou os seus
+serviços para criar um sistema para que se possa cadastrar as cidades
+intermediárias a uma rota. Neste sistema, 
+
+você precisa ler a origem e o
+destino de uma viagem e à medida que o motorista vai passando nas
+rodoviárias, 
+
+ele insere a hora de parada e o nome da cidade. Estes dados
+precisam estar armazenadas em um único vetor. Quando o motorista
+chega no destino, todo o percurso deve ser impresso, sendo cada dado
+em uma linha diferente.
+Exigência
+ O vetor precisa ser declarado e inicializado com as cidades de
+origem e destino.
+ As horas e cidades de parada precisam ser inseridas na ordem de
+parada do ônibus e entre as cidades de origem e destino. 
+ Para imprimir o percurso, o vetor precisa ser transformado em
+string por meio do método join().-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Cidade = function(nome, horas){
+			this.nome = nome;
+			this.horas = horas;
+		}
+		var rota=[];
+
+		rota.push(new Cidade(prompt("Digite a origem"),prompt("Digite a hora de saida")));
+		var destino = prompt("Digite o destino");
+
+		do{
+			rota.push(new Cidade(prompt("Digite o nome da cidade atual: "),prompt("Digite o horario:")));
+		} while (destino != rota[rota.length - 1].nome);
+
+		for (var i = 0; i < rota.length; i++) {
+			document.write("Cidade: "+rota[i].nome+" Horario: " +rota[i].horas+"<br>"); 
+		}
+	</script>
+	
+</body>
+</html>

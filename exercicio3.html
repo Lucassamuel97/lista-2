@@ -1,0 +1,67 @@
+<!--
+Construa um algoritmo que leia um cartão da Mega Sena e armazene-o
+em um vetor. Em seguida, preencha outro vetor com seis dezenas
+sorteadas. Apresente estas dezenas ordenadas crescentemente e diga
+se houve: quadra, quina ou sena.
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		var numeros=[];
+		var numerosEscolhidos=[];
+		var acertos = 0;
+
+		for (var i = 0; i < 6; i++) {
+			numeros.push(Math.ceil(Math.random() * 60));
+		}
+
+		for (var i = 1; i < 7; i++) {
+			numerosEscolhidos.push(+prompt("Digite o "+ i + " Numero escolhido:"));
+		}
+
+
+		console.log(numeros);
+		console.log(numerosEscolhidos);
+
+		for (var i = 0; i < numerosEscolhidos.length; i++) {
+			for (var j = 0; j < numeros.length; j++) {
+				if (numerosEscolhidos[i] == numeros[j]){
+					acertos++;
+				}
+			}
+		}
+
+		numeros.sort(function(a, b){
+			return a > b;
+		});
+		numerosEscolhidos.sort(function(a, b){
+			return a > b;
+		});
+
+		document.write("Numeros sorteados "+numeros+"<br>");
+		document.write("Numeros Escolhidos "+numerosEscolhidos+"<br>");
+		document.write("Total de acertos "+acertos+"<br>");
+
+		if (acertos == 4){
+			alert("Parabens você acertou a Quadra");
+		}else if (acertos == 5) {
+			alert("Parabens você acertou a Quina");
+		}else if (acertos == 6) {
+			alert("Parabens você Ganhou a sena !!!!!!!!!!");
+		}else{
+			alert("Não foi dessa vez, tente novamente");
+		}
+ 
+
+    </script>
+</body>
+
+</html>

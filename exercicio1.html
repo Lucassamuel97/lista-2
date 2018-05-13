@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var limite = 5;
+		var teste = [];
+		for (var i = 0; i < limite; i++) {
+			teste.push([]);
+			for (var j = 0; j < limite; j++) {
+				teste[i][j] = ("Linha:" + i +" Coluna:" + j);
+			}
+		}
+		console.log(teste);	
+		for (var i = 0; i < teste.length; i++) {
+			for (var j = 0; j < teste[i].length; j++) {
+				 document.write("| Linha: " + i +" Coluna: " + j+ " | ");
+			}
+			document.write('<br>');
+		}
+
+
+	</script>
+</body>
+</html>

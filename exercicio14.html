@@ -1,0 +1,35 @@
+<!--
+
+
+ 14.
+ Escreva um script que peça para o usuário digitar um texto, e logo em
+seguida, exiba em uma caixa de alerta a String invertida (do final para o
+início).
+Exigência:
+ Crie uma função no <head> que irá receber essa String, inverta,
+e depois retorne o resultado para ser impresso. A chamada para
+esta função deve ocorrer no <body>. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function inverso(texto){
+			var inverso = "";
+			for (var i = 0; i < texto.length; i++) {
+				inverso += texto.charAt(texto.length - i - 1);
+			}
+			return inverso;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("O inverso : "+inverso(prompt("Digite um texto")));
+	</script>
+	
+</body>
+</html>

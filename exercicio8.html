@@ -1,0 +1,32 @@
+<!--
+ 8. Escreva uma função que receba um argumento e retorne o seu tipo.
+Dica
+ Usar a função typeof (argumento).
+ São 6 tipos que podem ser retornados: object, boolean, function,
+number, string e undefined.
+ O tipo null não é retornado, uma vez que ele é considerado como
+object.
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ </head>
+ <body>
+ 	<script type="text/javascript">
+ 		function verificaTipo(argumento){
+ 			alert(typeof argumento);
+ 		}
+
+
+ 		verificaTipo("String");
+ 		verificaTipo(true);
+ 		verificaTipo(1);
+ 		verificaTipo(new Object());
+ 		verificaTipo(function teste(){});
+ 		verificaTipo(verificaTipo());
+ 		verificaTipo(null);
+ 	</script>
+ </body>
+ </html>

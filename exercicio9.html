@@ -1,0 +1,49 @@
+<!-- 
+9. Crie um programa que permita a entrada de 10 números pelo teclado e no
+final apresente qual é o maior e o menor número.
+Exigência
+ Inicializar as variáveis menor e maior respectivamente com o maior
+e menor número aceitável usando as constantes de Number.
+ Não utilizar array para guardar os números.
+ No momento da leitura, o valor lido precisa ser comparado com os
+valores atuais das variáveis menor e maior, e se necessário, alterar
+os valores de tais variáveis. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var maior = Number.MIN_SAFE_INTEGER; 
+		var menor = Number.MAX_VALUE;
+
+		function insereNumero(nr){
+			if (nr > maior){
+				maior = nr;
+			}
+			if (nr < menor){
+				menor = nr;
+			}
+			return nr;
+		}
+
+		var nr1 =  insereNumero(+prompt("1 - Insira um numero"));
+		var nr2 =  insereNumero(+prompt("2 - Insira um numero"));
+		var nr3 =  insereNumero(+prompt("3 - Insira um numero"));
+		var nr4 =  insereNumero(+prompt("4 - Insira um numero"));
+		var nr5 =  insereNumero(+prompt("5 - Insira um numero"));
+		var nr6 =  insereNumero(+prompt("6 - Insira um numero"));
+		var nr7 =  insereNumero(+prompt("7 - Insira um numero"));
+		var nr8 =  insereNumero(+prompt("8 - Insira um numero"));
+		var nr9 =  insereNumero(+prompt("9 - Insira um numero"));
+		var nr10 =  insereNumero(+prompt("10 - Insira um numero"));
+
+		document.write("<ul><li>Maior :"+maior+"</li><li>Menor :"+menor+"</li><ul>");
+
+
+	</script>
+</body>
+</html>

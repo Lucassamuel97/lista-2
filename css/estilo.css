@@ -1,0 +1,76 @@
+#celular{
+  margin: 8px;
+  width: 400px;
+  height: 600px;
+  background: url('celular4.png') no-repeat;
+  float: left;
+}
+.tela{
+  position: absolute;
+  width: 258px;
+  height: 455px;
+  background-color: #1C1C1C;
+  left: 26px;
+  top: 80px;
+}
+header{
+  width: 95%;
+  height: 95px;
+  background-color: #848484;
+  margin: 35px auto;
+  color: white;
+  font-size: 25px;
+  padding: 15px;
+}
+
+#verifica{
+  width: 215px;
+  background-color: #BDBDBD;
+}
+
+main{
+  width: 95%;
+  height: 280px;
+  background-color: #848484;
+  margin: 10px auto;
+  padding: 8px;
+}
+section{
+  background-color: #1C1C1C;
+  width: 68px;
+  height: 50px;
+  margin: 4px;
+  float: left;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+}
+section:hover, button:hover {
+  background-color: #6E6E6E;
+}
+
+b{
+  font-size: 11px;
+}
+#tela{
+ overflow-y:scroll;
+ font-size: 14px;
+ resize: none;
+ width: 100%;
+ height: 40px;
+ text-decoration: none;
+ overflow:hidden;
+}
+button{
+  background-color: #1C1C1C;
+  width: 223px;
+  height: 35px;
+  margin: 4px;
+  clear: both;
+  padding: 2px;
+  font-size: 20px;
+  color: white;
+}
+ul{ 
+  list-style-type: circle; 
+}

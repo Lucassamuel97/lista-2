@@ -1,0 +1,47 @@
+<!-- 7. 
+Crie uma página que apresente a hora atual em formato hh:mm:ss em um
+campo de texto. Esta página terá um botão responsável por incrementar
+o tempo atual, ou seja, a cada clique no botão a hora apresentada é
+incrementada em um segundo. Atualizar a apresentação da hora a cada
+clique no botão. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Horario</legend>
+		<label id="hora">Horario</label>
+		<p id="hora"></p>
+		<button onclick="adicionaSegundos()">Incrementar Seg.</button>
+	</fieldset>
+	<script type="text/javascript">
+		var data = new Date();
+		var hora = data.getHours();        
+		var min = data.getMinutes();        
+		var seg = data.getSeconds();
+
+		document.getElementById("hora").innerHTML = hora+":"+min+":"+seg;
+
+		function adicionaSegundos(){
+			seg++;
+			if (seg == 60){
+				seg = 0;
+				min++;
+				if (min == 60){
+					min =0;
+					hora++;
+					if (hora == 24){
+						hora = 00;
+					}
+				}
+			}
+			document.getElementById("hora").innerHTML = hora+":"+min+":"+seg;
+		}
+
+	</script>
+</body>
+</html>

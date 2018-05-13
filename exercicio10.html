@@ -1,0 +1,30 @@
+<!-- 
+10.Escreva uma função que receba um número via prompt e imprima o seu
+inverso.
+Dica:
+ Percorrer o loop de forma inversa e usar a função charAt().
+Exemplo:
+Entrada: 12345
+Saída: 54321 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>'Document'</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function inverso(nr){
+			var numero = "";
+			for (var i = 0; i < nr.length; i++) {
+				numero += nr.charAt(nr.length - i - 1);
+			}
+			return numero;
+		}
+
+		var numero =  inverso(prompt("Digite o numero"));
+		document.write(numero);
+	</script>
+</body>
+</html>
